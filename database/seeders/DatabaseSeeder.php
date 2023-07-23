@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Monitoring;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +19,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        Monitoring::create([
+            'temperature' => 0,
+            'turbidity' => 0,
+            'ph' => 0,
+            'dissolved_oxygen' => 0,
+            'kualitas_air' => 'Baik',
+            'sistem_kendali' => 'Hidup',
+        ]);
     }
 }

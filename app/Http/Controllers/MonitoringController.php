@@ -63,4 +63,51 @@ class MonitoringController extends Controller
     {
         //
     }
+
+    public function bacasuhu()
+    {
+        $monitoring = Monitoring::select('*')->get();
+        return view('bacasuhu', ['monitoring' => $monitoring]);
+    }
+
+    public function bacakekeruhan()
+    {
+        $monitoring = Monitoring::select('*')->get();
+        return view('bacakekeruhan', ['monitoring' => $monitoring]);
+    }
+
+    public function bacaph()
+    {
+        $monitoring = Monitoring::select('*')->get();
+        return view('bacapH', ['monitoring' => $monitoring]);
+    }
+
+    public function bacado()
+    {
+        $monitoring = Monitoring::select('*')->get();
+        return view('bacado', ['monitoring' => $monitoring]);
+    }
+
+    public function bacakualitasair()
+    {
+        $monitoring = Monitoring::select('*')->get();
+        return view('bacakualitasair', ['monitoring' => $monitoring]);
+    }
+
+    public function bacakendali()
+    {
+        $monitoring = Monitoring::select('*')->get();
+        return view('bacakendali', ['monitoring' => $monitoring]);
+    }
+
+    public function simpan () {
+        Monitoring::where ('id', 1)->update ([
+            'temperature' => request ('temperature'),
+            'turbidity' => request ('turbidity'),
+            'ph' => request ('ph'),
+            'dissolved_oxygen' => request ('dissolved_oxygen'),
+            'kualitas_air' => request ('kualitas_air'),
+            'sistem_kendali' => request ('sistem_kendali'),
+        ]);
+    }
 }

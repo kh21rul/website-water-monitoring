@@ -9,7 +9,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <title>Hello, world!</title>
-  </head>
+
+    {{-- Panggil file jquery untuk proses reatime --}}
+    <script type="text/javascript" src="{{ ('jquery/jquery.min.js') }}"></script>
+    
+    {{-- ajax untuk realtime --}}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            setInterval(function(){
+                $("#suhu").load("{{ url('bacasuhu') }}");
+                $("#kekeruhan").load("{{ url('bacakekeruhan') }}");
+                $("#pH").load("{{ url('bacaph') }}");
+                $("#oksigen").load("{{ url('bacado') }}");
+                $("#kualitas_air").load("{{ url('bacakualitasair') }}");
+                $("#kendali").load("{{ url('bacakendali') }}");
+            }, 1000);
+        });
+    </script>
+</head>
   <body>
     
     {{-- Tampilan Website Header--}}
@@ -28,7 +45,7 @@
                     </div>
                     <div class="card-body">
                         <div  style="font-size: 70px; font-weight: bold;">
-                            <span>0</span> <span style="font-size: 24px; vertical-align:top;">°C</span>   
+                            <span id="suhu">0</span> <span style="font-size: 24px; vertical-align:top;">°C</span>   
                         </div>
                     </div>
                 </div>
@@ -40,7 +57,7 @@
                     </div>
                     <div class="card-body">
                         <div  style="font-size: 70px; font-weight: bold;">
-                            <span>0</span> <span style="font-size: 24px; vertical-align:top;">NTU</span>   
+                            <span id="kekeruhan">0</span> <span style="font-size: 24px; vertical-align:top;">NTU</span>   
                         </div>
                     </div>
                 </div>
@@ -52,7 +69,7 @@
                     </div>
                     <div class="card-body">
                         <div  style="font-size: 70px; font-weight: bold;">
-                            <span>0</span>
+                            <span id="pH">0</span>
                         </div>
                     </div>
                 </div>
@@ -60,11 +77,11 @@
             <div class="col-md-6 mb-5">
                 <div class="card">
                     <div class="card-header" style="text-align: center; background-color: red; color: white;">
-                        <h4>Kekeruhan Air</h4>
+                        <h4>Kadar Oksigen Air</h4>
                     </div>
                     <div class="card-body">
                         <div  style="font-size: 70px; font-weight: bold;">
-                            <span>0</span> <span style="font-size: 24px; vertical-align:top;">mg/L</span>   
+                            <span id="oksigen">0</span> <span style="font-size: 24px; vertical-align:top;">mg/L</span>   
                         </div>
                     </div>
                 </div>
@@ -76,9 +93,9 @@
                     </div>
                     <div class="card-body">
                         <div  style="font-size: 70px; font-weight: bold;">
-                            <span>Baik</span>
+                            <span id="kualitas_air">Baik</span>
                         </div>
-                        <p class="card-text" style="font-weight:bold">Pompa Air Off</p>
+                        <p class="card-text" style="font-weight:bold">Pompa Air <span id="kendali">Mati</span></p>
                     </div>
                 </div>
             </div>
@@ -88,7 +105,7 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
