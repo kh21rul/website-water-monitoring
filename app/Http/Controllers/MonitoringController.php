@@ -79,7 +79,7 @@ class MonitoringController extends Controller
     public function bacaph()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacapH', ['monitoring' => $monitoring]);
+        return view('bacaph', ['monitoring' => $monitoring]);
     }
 
     public function bacado()

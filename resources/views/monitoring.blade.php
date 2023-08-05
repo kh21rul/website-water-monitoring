@@ -19,7 +19,7 @@
             setInterval(function(){
                 $("#suhu").load("{{ url('bacasuhu') }}");
                 $("#kekeruhan").load("{{ url('bacakekeruhan') }}");
-                $("#pH").load("{{ url('bacaph') }}");
+                $("#ph").load("{{ url('bacaph') }}");
                 $("#oksigen").load("{{ url('bacado') }}");
                 $("#kualitas_air").load("{{ url('bacakualitasair') }}");
                 $("#kendali").load("{{ url('bacakendali') }}");
@@ -69,7 +69,7 @@
                     </div>
                     <div class="card-body">
                         <div  style="font-size: 70px; font-weight: bold;">
-                            <span id="pH">0</span>
+                            <span id="ph">0</span>
                         </div>
                     </div>
                 </div>
