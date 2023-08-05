@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             'ph' => 0,
             'dissolved_oxygen' => 0,
             'kualitas_air' => 'Baik',
-            'sistem_kendali' => 'Hidup',
+            'sistem_kendali' => 'Mati',
         ]);
     }
 }

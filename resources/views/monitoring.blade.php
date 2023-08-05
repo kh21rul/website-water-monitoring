@@ -31,8 +31,8 @@
     
     {{-- Tampilan Website Header--}}
     <div class="container" style="text-align: center; margin-top: 80px; margin-bottom: 50px;">
-        <img src="{{ ('images/LaravelLogo.png') }}" style="width: 150px" alt="">
-        <h2>Nilai Parameter Kualitas Air <br> Secara Real Time</h2>
+        <img src="{{ ('images/hero.png') }}" style="width: 200px" alt="">
+        <h2 style="margin-top: 15px">Nilai Parameter Kualitas Air <br> Secara Real Time</h2>
     </div>
 
     {{-- Tampilan Nilai Sensor --}}
