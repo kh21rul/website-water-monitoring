@@ -8,7 +8,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Memantau udang vaname</title>
+
+    <style>
+        @media print {
+        /* Menyembunyikan elemen dengan kelas "print-button" saat dicetak */
+        .print-button {
+            display: none;
+        }
+    }
+    </style>
 
     {{-- Panggil file jquery untuk proses reatime --}}
     <script type="text/javascript" src="{{ ('jquery/jquery.min.js') }}"></script>
@@ -40,7 +49,7 @@
         <div class="row" style="text-align: center">
             <div class="col-md-6 mb-5">
                 <div class="card">
-                    <div class="card-header" style="text-align: center; background-color: red; color: white;">
+                    <div class="card-header" style="text-align: center; background-color: blue; color: white;">
                         <h4>Suhu Air</h4>
                     </div>
                     <div class="card-body">
@@ -52,7 +61,7 @@
             </div>
             <div class="col-md-6 mb-5">
                 <div class="card">
-                    <div class="card-header" style="text-align: center; background-color: red; color: white;">
+                    <div class="card-header" style="text-align: center; background-color: brown; color: white;">
                         <h4>Kekeruhan Air</h4>
                     </div>
                     <div class="card-body">
@@ -64,7 +73,7 @@
             </div>
             <div class="col-md-6 mb-5">
                 <div class="card">
-                    <div class="card-header" style="text-align: center; background-color: red; color: white;">
+                    <div class="card-header" style="text-align: center; background-color: green; color: white;">
                         <h4>kadar pH Air</h4>
                     </div>
                     <div class="card-body">
@@ -76,7 +85,7 @@
             </div>
             <div class="col-md-6 mb-5">
                 <div class="card">
-                    <div class="card-header" style="text-align: center; background-color: red; color: white;">
+                    <div class="card-header" style="text-align: center; background-color: lightblue; color: white;">
                         <h4>Kadar Oksigen Air</h4>
                     </div>
                     <div class="card-body">
@@ -86,9 +95,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-5 mx-auto">
+            <div class="col-md-6 mb-2 mx-auto">
                 <div class="card">
-                    <div class="card-header" style="text-align: center; background-color: red; color: white;">
+                    <div class="card-header" style="text-align: center; background-color: black; color: white;">
                         <h4>Kualitas air berdasarkan Fuzzy Logic</h4>
                     </div>
                     <div class="card-body">
@@ -98,6 +107,11 @@
                         <p class="card-text" style="font-weight:bold">Pompa Air <span id="kendali">Mati</span></p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row" style="text-align: center; margin: 50px;">
+            <div class="col-md-12">
+                <button class="btn btn-secondary print-button" onclick="window.print()">Cetak</button>
             </div>
         </div>
     </div>
