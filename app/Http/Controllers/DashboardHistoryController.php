@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Control;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class DashboardHistoryController extends Controller
 {
@@ -12,9 +13,18 @@ class DashboardHistoryController extends Controller
      */
     public function index()
     {
+
+        $controls = Control::latest();
+
+        if(request('filter')) {
+            $controls->where('created_at', 'like', '%' . request('filter') . '%');
+        } else {
+            $controls->where('created_at', 'like', '%' . Carbon::now()->format('Y-m-d') . '%');
+        }
+
         return view('dashboard.histories.index', [
-            'title' => 'Histories',
-            'controls' => Control::latest()->paginate(24),
+            'title' => 'Dashboard | Histories',
+            'controls' => $controls->get(),
         ]);
     }
 

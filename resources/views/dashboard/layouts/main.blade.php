@@ -15,7 +15,7 @@
     />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Vanamei Monitoring | {{ $title }}</title>
 
     <meta name="description" content="" />
 

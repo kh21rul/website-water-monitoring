@@ -14,7 +14,7 @@
                   Sistem Kendali mu telah membantu perbaiki kualias air sebanyak <span class="fw-bold">82%</span> silahkan cek history
                 </p>
 
-                <a href="#" class="btn btn-sm btn-outline-primary">History Kendali</a>
+                <a href="/dashboard/controls" class="btn btn-sm btn-outline-primary">History Kendali</a>
               </div>
             </div>
             <div class="col-sm-5 text-center text-sm-left">
