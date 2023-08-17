@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Monitoring;
+use App\Models\Control;
 use App\Models\User;
 
 class DatabaseSeeder extends Seeder
@@ -36,5 +37,8 @@ class DatabaseSeeder extends Seeder
             'kualitas_air' => 'Baik',
             'sistem_kendali' => 'Mati',
         ]);
+
+        Control::factory(72)->create();
+
     }
 }

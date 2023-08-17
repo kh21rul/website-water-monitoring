@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Control;
 
 class DashboardController extends Controller
 {
@@ -10,6 +11,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.index', [
             'title' => 'Dashboard',
+            'controls' => Control::latest()->paginate(5),
         ]);
     }
 }
