@@ -28,9 +28,9 @@
                         value="{{ request('filter') }}"
                         id="date-input"
                     />
-                    <button class="btn btn-outline-primary" type="submit">Filter</button>
+                    <button class="btn btn-outline-primary" type="submit"><i class="bx bx-search"></i> Filter</button>
                     </form>
-                    <button class="btn btn-outline-secondary" type="#" id="button-addon2">Cetak</button>
+                    <a class="btn btn-outline-secondary" target="_blank" href="/dashboard/cetak{{ request()->has('filter') ? '?filter=' . request('filter') : '' }}"><i class="bx bx-printer"></i> Cetak</a>
                 </div>
         </div>
         <div class="table-responsive text-nowrap">

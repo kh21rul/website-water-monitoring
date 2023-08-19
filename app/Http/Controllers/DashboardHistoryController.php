@@ -28,6 +28,22 @@ class DashboardHistoryController extends Controller
         ]);
     }
 
+    public function cetak()
+    {
+        $controls = Control::latest();
+
+        if(request('filter')) {
+            $controls->where('created_at', 'like', '%' . request('filter') . '%');
+        } else {
+            $controls->where('created_at', 'like', '%' . Carbon::now()->format('Y-m-d') . '%');
+        }
+
+        return view('dashboard.histories.cetakhistory', [
+            'title' => 'Dashboard | Histories',
+            'controls' => $controls->get(),
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */

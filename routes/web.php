@@ -28,6 +28,7 @@ Route::controller(LoginController::class)->group(function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::resource('/dashboard/controls', DashboardHistoryController::class)->middleware('auth');
+Route::get('/dashboard/cetak', [DashboardHistoryController::class, 'cetak'])->middleware('auth');
 
 Route::get('/bacasuhu', [MonitoringController::class, 'bacasuhu'])->middleware('auth');
 Route::get('/bacakekeruhan', [MonitoringController::class, 'bacakekeruhan'])->middleware('auth');
