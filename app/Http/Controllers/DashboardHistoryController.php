@@ -73,6 +73,8 @@ class DashboardHistoryController extends Controller
      */
     public function destroy(Control $control)
     {
-        //
+        $date = $control->created_at->format('Y-m-d');
+        Control::destroy($control->id);
+        return redirect('/dashboard/controls?filter=' . $date)->with('success', 'Data berhasil dihapus!');
     }
 }

@@ -3,6 +3,17 @@
 @section('container')
     <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">dashboard /</span> controls</h4>
+    @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+            ></button>
+        </div>
+    @endif
     <!-- Basic Bootstrap Table -->
         <div class="card mb-2">
         <h5 class="card-header">Rekap Data Monitoring Perhari</h5>
@@ -42,6 +53,11 @@
                     $no = 1;
                 @endphp
                 <tbody class="table-border-bottom-0">
+                @if ($controls->count() == 0)
+                    <tr>
+                        <td colspan="10" class="text-center">Belum ada data</td>
+                    </tr>
+                @endif
                 @foreach ($controls as $control)
                 <tr>
                     <td>{{ $no++ }}</td>
@@ -55,13 +71,17 @@
                     <td><span class="badge me-1 {{ $control->sistem_kendali == 'Hidup' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->sistem_kendali }}</span></td>
                     <td>
                     <div class="dropdown">
-                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                        <i class="bx bx-dots-vertical-rounded"></i>
-                        </button>
+                        <a href="#" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                        </a>
                         <div class="dropdown-menu">
-                        <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-trash me-1"></i> Delete</a
-                        >
+                            <form action="/dashboard/controls/{{ $control->id }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="dropdown-item">
+                                    <i class="bx bx-trash me-1"></i> Delete
+                                </button>
+                            </form>
                         </div>
                     </div>
                     </td>
@@ -69,7 +89,6 @@
                 @endforeach
                 </tbody>
             </table>
-            
         </div>
         </div>
     <!--/ Basic Bootstrap Table -->
