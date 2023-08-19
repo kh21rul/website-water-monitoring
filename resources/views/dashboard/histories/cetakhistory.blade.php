@@ -49,7 +49,7 @@
     <div class="container-xl flex-grow-1 container-p-y">
     <!-- Basic Bootstrap Table -->
         <div class="card mb-2">
-        <h5 class="card-header">Rekap Data Monitoring {{ $controls[0]->created_at->format('d M Y') }}</h5>
+        <h5 class="card-header">Rekap Data Monitoring {{ request('filter') ?: $today }}</h5>
         <div class="table-responsive text-nowrap">
             <table class="table">
                 <thead>

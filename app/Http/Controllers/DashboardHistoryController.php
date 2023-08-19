@@ -24,6 +24,7 @@ class DashboardHistoryController extends Controller
 
         return view('dashboard.histories.index', [
             'title' => 'Dashboard | Histories',
+            'today' => Carbon::now()->format('Y-m-d'),
             'controls' => $controls->get(),
         ]);
     }
@@ -40,6 +41,7 @@ class DashboardHistoryController extends Controller
 
         return view('dashboard.histories.cetakhistory', [
             'title' => 'Dashboard | Histories',
+            'today' => Carbon::now()->format('Y-m-d'),
             'controls' => $controls->get(),
         ]);
     }

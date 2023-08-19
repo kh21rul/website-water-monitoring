@@ -25,8 +25,7 @@
                         name="filter"
                         type="date"
                         class="form-control"
-                        value="{{ request('filter') }}"
-                        id="date-input"
+                        value="{{ request('filter') ?: $today }}"
                     />
                     <button class="btn btn-outline-primary" type="submit"><i class="bx bx-search"></i> Filter</button>
                     </form>
@@ -93,18 +92,4 @@
         </div>
     <!--/ Basic Bootstrap Table -->
     </div>
-
-    {{-- apabila request ada pada /dashboard/controls maka tampilkan script di bawah --}}
-    @if (request('filter') == '')
-        <script>
-            // Dapatkan elemen input tanggal menggunakan ID
-            var dateInput = document.getElementById('date-input');
-            
-            // Dapatkan tanggal hari ini dalam format YYYY-MM-DD
-            var today = new Date().toISOString().substr(0, 10);
-            
-            // Setel nilai input tanggal ke tanggal hari ini
-            dateInput.value = today;
-        </script>
-    @endif
 @endsection
