@@ -14,10 +14,13 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    
 
     <title>Vanamei Monitoring | {{ $title }}</title>
 
     <meta name="description" content="" />
+
+    <link rel="manifest" href="manifest.json" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('img/iconWeb.png') }}" />
@@ -108,5 +111,11 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("{{ asset('serviceworker.js') }}");
+      }
+    </script>
   </body>
 </html>

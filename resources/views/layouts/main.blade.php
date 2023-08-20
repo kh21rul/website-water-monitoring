@@ -8,6 +8,8 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+    <link rel="manifest" href="manifest.json" />
+
     <!-- Favicon -->
     <link href="{{ asset('img/iconWeb.png') }}" rel="icon">
 
@@ -50,6 +52,12 @@
 
     <!-- Template Javascript -->
     <script src="{{ url('js/main.js') }}"></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("{{ asset('serviceworker.js') }}");
+      }
+    </script>
 </body>
 
 </html>
