@@ -66,8 +66,8 @@
                     <td>{{ $control->turbidity }}</td>
                     <td>{{ $control->ph }}</td>
                     <td>{{ $control->dissolved_oxygen }}</td>
-                    <td>{{ $control->kualitas_air }}</td>
-                    <td><span class="badge me-1 {{ $control->sistem_kendali == 'Hidup' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->sistem_kendali }}</span></td>
+                    <td><span class="badge me-1 {{ $control->water_pump == 'Hidup' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->water_pump }}</span></td>
+                    <td><span class="badge me-1 {{ $control->aerator == 'Hidup' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->aerator }}</span></td>
                     <td>
                     <div class="dropdown">
                         <a href="#" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">

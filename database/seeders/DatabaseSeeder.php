@@ -34,11 +34,11 @@ class DatabaseSeeder extends Seeder
             'turbidity' => 0,
             'ph' => 0,
             'dissolved_oxygen' => 0,
-            'kualitas_air' => 'Baik',
-            'sistem_kendali' => 'Mati',
+            'water_pump' => 'Mati',
+            'aerator' => 'Mati',
         ]);
 
-        Control::factory(72)->create();
+        Control::factory(20)->create();
 
     }
 }

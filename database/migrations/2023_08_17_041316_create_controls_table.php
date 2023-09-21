@@ -17,8 +17,8 @@ return new class extends Migration
             $table->decimal('turbidity', 10, 2);
             $table->decimal('ph', 10, 2);
             $table->decimal('dissolved_oxygen', 10, 2);
-            $table->string('kualitas_air');
-            $table->string('sistem_kendali');
+            $table->string('water_pump');
+            $table->string('aerator');
             $table->timestamps();
         });
     }

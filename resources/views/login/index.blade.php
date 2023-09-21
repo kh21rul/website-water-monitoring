@@ -70,7 +70,7 @@
                     {{ session('loginError') }}
                 </div>
             @endif
-          <!-- Register -->
+          <!-- Login -->
           <div class="card">
             <div class="card-body">
               <!-- Logo -->
@@ -134,7 +134,7 @@
               </form>
             </div>
           </div>
-          <!-- /Register -->
+          <!-- /Login -->
         </div>
       </div>
     </div>

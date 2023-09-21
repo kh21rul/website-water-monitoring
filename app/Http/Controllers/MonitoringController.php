@@ -88,16 +88,16 @@ class MonitoringController extends Controller
         return view('bacado', ['monitoring' => $monitoring]);
     }
 
-    public function bacakualitasair()
+    public function bacawaterpump()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacakualitasair', ['monitoring' => $monitoring]);
+        return view('bacawaterpump', ['monitoring' => $monitoring]);
     }
 
-    public function bacakendali()
+    public function bacaaerator()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacakendali', ['monitoring' => $monitoring]);
+        return view('bacaaerator', ['monitoring' => $monitoring]);
     }
 
     public function simpan () {
@@ -106,8 +106,8 @@ class MonitoringController extends Controller
             'turbidity' => request ('turbidity'),
             'ph' => request ('ph'),
             'dissolved_oxygen' => request ('dissolved_oxygen'),
-            'kualitas_air' => request ('kualitas_air'),
-            'sistem_kendali' => request ('sistem_kendali'),
+            'water_pump' => request ('water_pump'),
+            'aerator' => request ('aerator'),
         ]);
     }
 }

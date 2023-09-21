@@ -11,7 +11,7 @@
               <div class="card-body">
                 <h5 class="card-title text-primary">Congratulations {{ auth()->user()->name }}! 🎉</h5>
                 <p class="mb-4">
-                  Sistem Kendali mu telah membantu perbaiki kualias air sebanyak <span class="fw-bold">82%</span> silahkan cek history
+                  Sistem Kendali mu telah membantu perbaiki kualias air sangat baik, silahkan cek history
                 </p>
 
                 <a href="/dashboard/controls" class="btn btn-sm btn-outline-primary">History Kendali</a>
@@ -84,8 +84,8 @@
                       <th>Keruh</th>
                       <th>pH</th>
                       <th>Oksigen</th>
-                      <th>Kulitas</th>
-                      <th>Kendali</th>
+                      <th>Water Pump</th>
+                      <th>Aerator</th>
                   </tr>
                   </thead>
                   <tbody class="table-border-bottom-0">
@@ -97,8 +97,8 @@
                       <td>{{ $control->turbidity }}</td>
                       <td>{{ $control->ph }}</td>
                       <td>{{ $control->dissolved_oxygen }}</td>
-                      <td>{{ $control->kualitas_air }}</td>
-                      <td><span class="badge me-1 {{ $control->sistem_kendali == 'Hidup' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->sistem_kendali }}</span></td>
+                      <td><span class="badge me-1 {{ $control->water_pump == 'Hidup' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->water_pump }}</td>
+                      <td><span class="badge me-1 {{ $control->aerator == 'Hidup' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->aerator }}</span></td>
                   </tr>
                   @endforeach
                   </tbody>
@@ -175,14 +175,12 @@
                 <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
                   <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
                     <div class="card-title">
-                      <span class="badge bg-label-warning rounded-pill mb-3">Kualitas Air</span>
-                      <h5 id="kualitas_air" class="text-nowrap">Baik</h5>
+                      <span class="badge bg-label-primary rounded-pill mb-3">Water Pump</span>
+                      <h5 id="water_pump" class="text-nowrap">Mati</h5>
                     </div>
-                    <div class="mt-sm-auto">
-                      <small class="text-success text-nowrap fw-semibold"
-                        >Sistem Kendali</small
-                      >
-                      <h3 id="kendali" class="mb-0">Mati</h3>
+                    <div class="card-title">
+                      <span class="badge bg-label-primary rounded-pill mb-3">Aerator</span>
+                      <h5 id="aerator" class="text-nowrap">Mati</h5>
                     </div>
                   </div>
                   <div id="profileReportChart"></div>

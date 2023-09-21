@@ -9,8 +9,8 @@
                 $("#kekeruhan").load("{{ url('bacakekeruhan') }}");
                 $("#ph").load("{{ url('bacaph') }}");
                 $("#oksigen").load("{{ url('bacado') }}");
-                $("#kualitas_air").load("{{ url('bacakualitasair') }}");
-                $("#kendali").load("{{ url('bacakendali') }}");
+                $("#water_pump").load("{{ url('bacawaterpump') }}");
+                $("#aerator").load("{{ url('bacaaerator') }}");
             }, 1000);
         });
     </script>

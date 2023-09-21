@@ -38,4 +38,4 @@ Route::get('/bacakualitasair', [MonitoringController::class, 'bacakualitasair'])
 Route::get('/bacakendali', [MonitoringController::class, 'bacakendali'])->middleware('auth');
 
 // Route untuk menyimpan nilai sensor ke database
-Route::get('/simpan/{temperature}/{turbidity}/{ph}/{dissolved_oxygen}/{kualitas_air}/{sistem_kendali}', [MonitoringController::class, 'simpan']);
+Route::get('/simpan/{temperature}/{turbidity}/{ph}/{dissolved_oxygen}/{water_pump}/{aerator}', [MonitoringController::class, 'simpan']);

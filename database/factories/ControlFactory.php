@@ -21,8 +21,8 @@ class ControlFactory extends Factory
             'turbidity' => $this->faker->randomFloat(2, 25, 600),
             'ph' => $this->faker->randomFloat(2, 2, 10),
             'dissolved_oxygen' => $this->faker->randomFloat(2, 2, 10),
-            'kualitas_air' => $this->faker->randomElement(['Baik', 'Cukup', 'Buruk']),
-            'sistem_kendali' => $this->faker->randomElement(['Hidup', 'Mati']),
+            'water_pump' => $this->faker->randomElement(['Hidup', 'Mati']),
+            'aerator' => $this->faker->randomElement(['Hidup', 'Mati']),
         ];
     }
 }
