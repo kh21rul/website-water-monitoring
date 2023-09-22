@@ -59,8 +59,8 @@
                     <th>Keruh</th>
                     <th>pH</th>
                     <th>Oksigen</th>
-                    <th>Kulitas</th>
-                    <th>Kendali</th>
+                    <th>Pompa Air</th>
+                    <th>Aerator</th>
                 </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
@@ -76,8 +76,8 @@
                     <td>{{ $control->turbidity }}</td>
                     <td>{{ $control->ph }}</td>
                     <td>{{ $control->dissolved_oxygen }}</td>
-                    <td>{{ $control->kualitas_air }}</td>
-                    <td><span class="badge me-1 {{ $control->sistem_kendali == 'Hidup' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->sistem_kendali }}</span></td>
+                    <td><span class="badge me-1 {{ $control->water_pump == 'Hidup' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->water_pump }}</span></td>
+                    <td><span class="badge me-1 {{ $control->aerator == 'Hidup' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->aerator }}</span></td>
                 </tr>
                 @endforeach
                 </tbody>

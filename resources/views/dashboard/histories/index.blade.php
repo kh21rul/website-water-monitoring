@@ -43,8 +43,8 @@
                     <th>Keruh</th>
                     <th>pH</th>
                     <th>Oksigen</th>
-                    <th>Kulitas</th>
-                    <th>Kendali</th>
+                    <th>Pompa Air</th>
+                    <th>Aerator</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
