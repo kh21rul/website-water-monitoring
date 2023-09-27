@@ -34,8 +34,8 @@ Route::get('/bacasuhu', [MonitoringController::class, 'bacasuhu'])->middleware('
 Route::get('/bacakekeruhan', [MonitoringController::class, 'bacakekeruhan'])->middleware('auth');
 Route::get('/bacaph', [MonitoringController::class, 'bacaph'])->middleware('auth');
 Route::get('/bacado', [MonitoringController::class, 'bacado'])->middleware('auth');
-Route::get('/bacakualitasair', [MonitoringController::class, 'bacakualitasair'])->middleware('auth');
-Route::get('/bacakendali', [MonitoringController::class, 'bacakendali'])->middleware('auth');
+Route::get('/bacawaterpump', [MonitoringController::class, 'bacawaterpump'])->middleware('auth');
+Route::get('/bacaaerator', [MonitoringController::class, 'bacaaerator'])->middleware('auth');
 
 // Route untuk menyimpan nilai sensor ke database
 Route::get('/simpan/{temperature}/{turbidity}/{ph}/{dissolved_oxygen}/{water_pump}/{aerator}', [MonitoringController::class, 'simpan']);
