@@ -40,8 +40,8 @@ class StoreControlData extends Command
                 'turbidity' => $monitoringData->turbidity,
                 'ph' => $monitoringData->ph,
                 'dissolved_oxygen' => $monitoringData->dissolved_oxygen,
-                'kualitas_air' => $monitoringData->kualitas_air,
-                'sistem_kendali' => $monitoringData->sistem_kendali,
+                'water_pump' => $monitoringData->water_pump,
+                'aerator' => $monitoringData->aerator,
             ];
 
             Control::create($controlData);
