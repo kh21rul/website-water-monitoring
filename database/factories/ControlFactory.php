@@ -17,12 +17,7 @@ class ControlFactory extends Factory
     public function definition(): array
     {
         return [
-            'temperature' => $this->faker->randomFloat(2, 20, 40),
-            'turbidity' => $this->faker->randomFloat(2, 25, 600),
-            'ph' => $this->faker->randomFloat(2, 2, 10),
-            'dissolved_oxygen' => $this->faker->randomFloat(2, 2, 10),
-            'water_pump' => $this->faker->randomElement(['Hidup', 'Mati']),
-            'aerator' => $this->faker->randomElement(['Hidup', 'Mati']),
+            // 
         ];
     }
 }

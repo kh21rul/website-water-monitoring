@@ -37,8 +37,5 @@ class DatabaseSeeder extends Seeder
             'water_pump' => 'Mati',
             'aerator' => 'Mati',
         ]);
-
-        Control::factory(20)->create();
-
     }
 }
