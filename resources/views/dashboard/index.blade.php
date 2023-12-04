@@ -9,7 +9,7 @@
           <div class="d-flex align-items-end row">
             <div class="col-sm-7">
               <div class="card-body">
-                <h5 class="card-title text-primary">Congratulations {{ auth()->user()->name }}! 🎉</h5>
+                <h5 class="card-title text-primary">Congratulations Dear! 🎉</h5>
                 <p class="mb-4">
                   Sistem Kendali mu telah membantu perbaiki kualias air sangat baik, silahkan cek history
                 </p>

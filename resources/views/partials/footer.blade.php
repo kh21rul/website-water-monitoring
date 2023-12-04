@@ -7,7 +7,7 @@
                         &copy; <a href="https://monitoring.kh21rul.site/">monitoring.kh21rul.site</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        Created By <a href="https://github.com/kh21rul">Khairul Aqram</a> 2023
+                        Created By <a href="#">Munirul Ula</a> 2023
                     </div>
                 </div>
             </div>
