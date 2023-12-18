@@ -9,7 +9,7 @@
                 <div class="col-lg-6">
                     <h1 class="display-4 mb-3 animated slideInDown">Web monitoring kualitas air budidaya udang vaname</h1>
                     <p class="animated slideInDown">
-                        Website monitoring kualitas air untuk budidaya udang vaname, Penelitian PNBP 2023, Teknik Informatika, Universitas Malikussaleh.
+                        Website monitoring kualitas air untuk budidaya udang vaname, Tugas akhir Khairul Aqram, nim 190170125, Teknik Informatika, Universitas Malikussaleh.
                     </p>
                     <a href="/dashboard" class="btn btn-primary py-3 px-4 animated slideInDown">Mulai Monitoring</a>
                 </div>

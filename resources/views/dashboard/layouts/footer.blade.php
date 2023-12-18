@@ -7,7 +7,7 @@
             document.write(new Date().getFullYear());
         </script>
         , made with 😁 by
-        <a href="https://github.com/kh21rul" target="_blank" class="footer-link fw-bolder">People!!!</a>
+        <a href="https://github.com/kh21rul" target="_blank" class="footer-link fw-bolder">Khairul Aqram</a>
         </div>
     </div>
     </footer>
