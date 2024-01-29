@@ -30,10 +30,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Monitoring::create([
-            'temperature' => 0,
-            'turbidity' => 0,
-            'ph' => 0,
-            'dissolved_oxygen' => 0,
+            'temperature' => 28.8,
+            'turbidity' => 90,
+            'ph' => 7.9,
+            'dissolved_oxygen' => 6.8,
             'water_pump' => 'Mati',
             'aerator' => 'Mati',
         ]);
